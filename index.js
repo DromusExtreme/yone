@@ -1,7 +1,3 @@
-require('dotenv').config()
-require('dotenv').config({ path: __dirname + '/.env.local' });
-
-
 const Discord = require('discord.js'); //{Client, RichEmbed}
 const bot = new Discord.Client();
 
