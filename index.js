@@ -1,18 +1,15 @@
 require('dotenv').config()
 require('dotenv').config({ path: __dirname + '/.env.local' });
 
+
 const Discord = require('discord.js'); //{Client, RichEmbed}
 const bot = new Discord.Client();
+
 
 const token = process.env.DISCORD_TOKEN ;
 const riotAPiToken = process.env.RIOTAPI_TOKEN;
 const PREFIX = ">";
 const ytdl = require("ytdl-core");
-
-
-var versoin = '1.2';
-var servers = {};
-
 
 
 //const privateMessage = require('./private.message');
@@ -26,11 +23,14 @@ bot.on('ready', () => {
 
 
 
+
 bot.on('message', msg=>{
     let message = (msg.content).toLowerCase();
     
     console.log(message);
     
+
+
     //Ranks
     message.includes("iron") || message.includes("ricardo") || message.includes("unranked") ? msg.reply('Esse pessoal é tão mau , que não acertava na água se estivesse num barco.'): false;
     message.includes("bronze") ? msg.reply('Não tá mal já acertam no botão de mute!'): false;
@@ -43,7 +43,7 @@ bot.on('message', msg=>{
     message.includes("judeu") ? msg.reply('Reza a lenda que ficou na Jungle o resto da vida a farmar, pa não ir gankar bot.'): false;
     message.includes("joao") || message.includes('joão') ? msg.reply('Reza a lenda que esse homem nunca ganhou a botlane.'): false;
     message.includes("andre") ? msg.reply('Reza a lenda que este homem costumava partir colheres com o rabo, bastava fletir o rabo... No entanto parou quando deixou de ser rentável! *OTP Nasus pa vida!*'): false;              
-    message.includes("ricardo") ? msg.reply('Reza a lenda que este homom é a única pessoa no mundo que consegue feedar de Trynda...'): false;
+    message.includes("ricardo") ? msg.reply('Reza a lenda que este homom é a única pessoa no mundo que consegue feedar com o champ que não morre...'): false;
     message.includes('inglez') ? msg.reply('Reza a lenda que até hoje ainda não acertou um skillshot!'): false;
     message.includes('henrique') ? msg.reply('Reza a lenda que este homem nunca chegou ao nível 30'): false;
     message.includes('laura') ? msg.reply('Tche puto , gandee kizomba memmooo furiroo!'): false;
@@ -92,7 +92,7 @@ bot.on('message', msg=>{
     message.includes("graves") ? msg.reply('O ministério da saúde adverte que fumar pode causar cancro!'): false;
     message.includes("hecarim") ? msg.reply(''): false;
     message.includes("heimerdinger") ? msg.reply('Imagina a pessoa que contratavas para arder a tua casa...'): false;
-    message.includes("illaoi") ? msg.reply('Quase fez metade dum servidor de lol parar de jogar lol...'): false;
+    message.includes("illaoi") ? msg.reply('Quase fez metade dum servidor parar de jogar lol...'): false;
     message.includes("irelia") ? msg.reply(''): false;
     message.includes("ivern") ? msg.reply('100% Jamaicano'): false;
     message.includes("janna") ? msg.reply(''): false;
@@ -127,7 +127,7 @@ bot.on('message', msg=>{
     message.includes("maokai") ? msg.reply('Quem é que acorda, come, lava os dentes, liga o pc, liga o lol, e VAI JOGAR DELE?!'): false;
     message.includes("master yi") ? msg.reply('Q-Q-W-Q-Q-Q = Penta'): false;
     message.includes("miss fortune") ? msg.reply(''): false;
-    message.includes("mordekaiser") ? msg.reply(''): false;
+    message.includes("mordekaiser") ? msg.reply('CameraPrivê'): false;
     message.includes("morgana") ? msg.reply('Vai mijar que o root demora tempo'): false;
     message.includes("nami") ? msg.reply('Nem apagar o brand consegue'): false;
     message.includes("nasus") ? msg.reply('Propaganda ao Farming Simulator 2012'): false;
@@ -146,7 +146,7 @@ bot.on('message', msg=>{
     message.includes("quinn") ? msg.reply('Nem a voar consegue ver'): false;
     message.includes("rakan") ? msg.reply('Stalker'): false;
     message.includes("rammus") ? msg.reply('Hotwheels.com'): false;
-    message.includes("rek'sai") ? msg.reply('A última vez que vi alguém joar com ela, foi o Wilson no campeonato de 2015...'): false;
+    message.includes("rek'sai") ? msg.reply('A última vez que vi alguém jogar com ela, foi o Wilson no campeonato de 2015...'): false;
     message.includes("renekton") ? msg.reply('Mais conhecido por Lacoste'): false;
     message.includes("rengar") ? msg.reply(''): false;
     message.includes("riven") ? msg.reply('40% CR = OP'): false;
